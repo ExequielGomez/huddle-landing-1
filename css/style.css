@@ -34,7 +34,15 @@ header img{
   border: 2px solid var(--button);
   border-radius:2em;
   padding: 1em 4em;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: .3s;
+  will-change: transform;
 }
+.button:hover{
+  transform: scale(1.08);
+}
+
 main{
   text-align: center;
   padding: 6em 0;
@@ -125,9 +133,6 @@ section .data div{
   font-size: 2em;
   margin: 2em
 }
-/* .get-started a{
-  padding: 1em 4em;
-} */
 footer .content{
   background: var(--footer);
   color: white;
@@ -165,10 +170,17 @@ footer .line .icon{
 .mail{
   background: url("../images/icon-email.svg")
 }
+.social-buttons{
+  display: flex;
+}
 .social-buttons a{
   color: white;
   font-size: 1.7em;
   margin-right: .3em;
+  transition: .3s;
+}
+.contact .social-buttons a:hover{
+  transform: scale(1.5);
 }
 footer .newsletter input{
   padding: .7em 2em;
