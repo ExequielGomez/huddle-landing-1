@@ -203,10 +203,21 @@ footer .newsletter input{
     display: block;
     width: 100%;
   }
+  .caract .content{
+    flex-direction: column-reverse;
+  }
+  .caract .content img{
+    width: 85%;
+  }
+  .caract .content .text{
+    width: 90%;
+    text-align: center;
+  }
   footer .content{
     display: flex;
     align-content: center;
     flex-direction: column-reverse;
+    padding: 5em 1em;
   }
   footer p{
     width: auto;
@@ -214,9 +225,10 @@ footer .newsletter input{
   .newsletter{
     margin: 3em 0;
   }
-  .newsletter input{
+  footer .newsletter input{
     width: 100%;
     box-sizing: border-box;
+    margin: .5em 0;
   }
   .newsletter .button{
     width: 50%;
