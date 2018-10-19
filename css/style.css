@@ -1,8 +1,8 @@
 :root{
   --button:hsl(322, 100%, 66%);
+  --bg:hsl(207, 100%, 98%);
+  --footer:hsl(192, 100%, 9%);
 }
-/*
-*/
 body{
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -11,17 +11,17 @@ h1, h2{
   font-family: 'Poppins', sans-serif;
 }
 h1{
-  font-size: 3em;
+  font-size: 2.5em;
 }
 a{
   text-decoration: none;
 }
 .container{
-  padding: 0 2em;
+  padding: 0 4em;
 }
 header{
   height: 3em;
-  border: 2px solid black;
+  margin-top: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@ header img{
 .button{
   border: 2px solid var(--button);
   border-radius:2em;
-  padding: .5em 1.5em;
+  padding: 1em 4em;
 }
 main{
   text-align: center;
@@ -44,10 +44,13 @@ main{
 main p{
   width: 50%;
 }
-main .button{
+.full.button{
   font-weight: bold;
   background: var(--button);
   color: white;
+}
+main .full.button{
+  margin: 2em;
 }
 .hero img{
   display: block;
@@ -58,6 +61,10 @@ section .data{
   padding: 5em;
   display: flex;
   justify-content: space-around;
+}
+.data .text{
+  display: flex;
+  align-items: center;
 }
 .icon.communities{
   background: url("../images/icon-communities.svg");
@@ -74,18 +81,145 @@ section .data{
 .data strong{
   font-size: 5em;
 }
-.data div{
+section .data div{
   flex-direction: column;
 }
+.bg-d{
+  display: block;
+  width: 100%;
+}
+.bg-m{
+  display: none;
+}
+.bg.content{
+  background: var(--bg);
+}
 .caract article{
+  margin: 2em 0;
+}
+.caract article .content{
   display: flex;
   align-items: center;
   padding: 0 2em;
+  justify-content: space-around;
 }
 .caract .text{
-  width: 50%;
+  width: 40%;
 }
-.caract img{
+.caract .content img{
   width: 30%;
   object-fit: contain;
+}
+.caract .flowing{
+  flex-direction: row-reverse;
+}
+.get-started{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10em 0;
+}
+.get-started h2{
+  font-size: 2em;
+  margin: 2em
+}
+/* .get-started a{
+  padding: 1em 4em;
+} */
+footer .content{
+  background: var(--footer);
+  color: white;
+  padding: 5em 4em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20%;
+}
+.logo2{
+  fill:white;
+}
+footer p{
+  width: 80%;
+  font-size: .9em;
+}
+footer .data{
+  margin: 2em 0;
+}
+footer .data .line{
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+footer .data a{
+  color: white;
+}
+footer .line .icon{
+  display: inline-block;
+  padding: .5em;
+  margin-right: 1em;
+}
+.phone{
+  background: url("../images/icon-phone.svg")
+}
+.mail{
+  background: url("../images/icon-email.svg")
+}
+.social-buttons a{
+  color: white;
+  font-size: 1.7em;
+  margin-right: .3em;
+}
+footer .newsletter input{
+  padding: .7em 2em;
+  border: none;
+  border-radius: .4em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+@media screen and (max-width:480px){
+  .container{
+    padding: 0 1em;
+  }
+  header img{
+    width: 8em;
+  }
+  header .button{
+    padding: .5em 2em;
+  }
+  main p{
+    width: 90%;
+  }
+  section .data{
+    flex-direction: column;
+    margin: 1em 0;
+  }
+  section .data .text{
+    margin-bottom: 3em;
+  }
+  .bg-d{
+    display: none;
+  }
+  .bg-m{
+    display: block;
+    width: 100%;
+  }
+  footer .content{
+    display: flex;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+  footer p{
+    width: auto;
+  }
+  .newsletter{
+    margin: 3em 0;
+  }
+  .newsletter input{
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .newsletter .button{
+    width: 50%;
+    float: right;
+  }
 }
