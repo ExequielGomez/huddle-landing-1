@@ -30,6 +30,7 @@ header img{
   width: 10em;
 }
 .button{
+  color: var(--button);
   border: 2px solid var(--button);
   border-radius:2em;
   padding: 1em 4em;
